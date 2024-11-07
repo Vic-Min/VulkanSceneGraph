@@ -48,6 +48,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include <vsg/maths/mat3.h>
 #include <vsg/maths/mat4.h>
 #include <vsg/maths/plane.h>
+#include <vsg/maths/powerscale.h>
 #include <vsg/maths/quat.h>
 #include <vsg/maths/sample.h>
 #include <vsg/maths/sphere.h>
