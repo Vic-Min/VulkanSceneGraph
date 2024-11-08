@@ -42,6 +42,10 @@ extern "C"
     /// Native Windowing support provided with vsg::Window::create(windowTraits) enabled when 1, disabled when 0
     #define VSG_SUPPORTS_Windowing @VSG_SUPPORTS_Windowing@
 
+    /// PowerScale support in matrix and vector maths, disabled when 0 (default) or enabled when 1
+    /// Power Scale support is required for astonomically scaled scene graphs.
+    #define VSG_SUPPORTS_PowerScale @VSG_SUPPORTS_PowerScale@
+
     struct VsgVersion
     {
         unsigned int major;

@@ -57,4 +57,8 @@ namespace vsg
         return v.xyz * pow(10.0, v.w);
     }
 
+    // return true if the VulkanSceneGraph library has been built with Power Scale support.
+    // if false then the matrix maths support relating to Power Scaling will not function correctly.
+    extern VSG_DECLSPEC bool isPowerScaleSupported();
+
 } // namespace vsg

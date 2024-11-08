@@ -23,6 +23,7 @@ set(SOURCES
     core/Version.cpp
 
     maths/maths_transform.cpp
+    maths/powerscale.cpp
 
     nodes/Group.cpp
     nodes/Geometry.cpp

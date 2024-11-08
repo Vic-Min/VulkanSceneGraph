@@ -80,6 +80,9 @@ if (VSG_SUPPORTS_Windowing)
     endif()
 endif()
 
+# Enable/disable Power Scale support - used for astonomically scaled scene graphs
+set(VSG_SUPPORTS_PowerScale 0 CACHE STRING "Optional power scale support. 0 for off, 1 for enabled." )
+
 # this line needs to be after the call to setup_build_vars()
 configure_file("${VSG_SOURCE_DIR}/src/vsg/core/Version.h.in" "${VSG_VERSION_HEADER}")
 
