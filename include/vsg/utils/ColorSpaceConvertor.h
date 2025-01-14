@@ -50,23 +50,23 @@ namespace vsg
     class VSG_DECLSPEC NoOpColorSpaceConvertor : public Inherit<ColorSpaceConvertor, NoOpColorSpaceConvertor>
     {
     public:
-        void convertVertexColor(vec4& color) const override {};
-        void convertVertexColor(dvec4& color) const override {};
-        void convertVertexColor(vec3& color) const override {};
-        void convertVertexColor(dvec3& color) const override {};
-        void convertVertexColors(vec4Array& colors) const override {};
-        void convertVertexColors(dvec4Array& colors) const override {};
-        void convertVertexColors(vec3Array& colors) const override {};
-        void convertVertexColors(dvec3Array& colors) const override {};
+        void convertVertexColor(vec4& ) const override {};
+        void convertVertexColor(dvec4& ) const override {};
+        void convertVertexColor(vec3& ) const override {};
+        void convertVertexColor(dvec3& ) const override {};
+        void convertVertexColors(vec4Array& ) const override {};
+        void convertVertexColors(dvec4Array& ) const override {};
+        void convertVertexColors(vec3Array& ) const override {};
+        void convertVertexColors(dvec3Array& ) const override {};
 
-        void convertMaterialColor(vec4& color) const override {};
-        void convertMaterialColor(dvec4& color) const override {};
-        void convertMaterialColor(vec3& color) const override {};
-        void convertMaterialColor(dvec3& color) const override {};
-        void convertMaterialColors(vec4Array& colors) const override {};
-        void convertMaterialColors(dvec4Array& colors) const override {};
-        void convertMaterialColors(vec3Array& colors) const override {};
-        void convertMaterialColors(dvec3Array& colors) const override {};
+        void convertMaterialColor(vec4& ) const override {};
+        void convertMaterialColor(dvec4& ) const override {};
+        void convertMaterialColor(vec3& ) const override {};
+        void convertMaterialColor(dvec3& ) const override {};
+        void convertMaterialColors(vec4Array& ) const override {};
+        void convertMaterialColors(dvec4Array& ) const override {};
+        void convertMaterialColors(vec3Array& ) const override {};
+        void convertMaterialColors(dvec3Array& ) const override {};
     };
     VSG_type_name(vsg::NoOpColorSpaceConvertor);
 
