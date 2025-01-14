@@ -22,7 +22,6 @@ namespace vsg
     class VSG_DECLSPEC ColorSpaceConvertor : public Inherit<Object, ColorSpaceConvertor>
     {
     public:
-
         ColorSpaceConvertor();
 
         //
@@ -51,20 +50,20 @@ namespace vsg
     class VSG_DECLSPEC NoOpColorSpaceConvertor : public Inherit<ColorSpaceConvertor, NoOpColorSpaceConvertor>
     {
     public:
-        void convertVertexColor(vec4& color) const override{};
+        void convertVertexColor(vec4& color) const override {};
         void convertVertexColor(dvec4& color) const override {};
         void convertVertexColor(vec3& color) const override {};
         void convertVertexColor(dvec3& color) const override {};
-        void convertVertexColors(vec4Array& colors) const override{};
+        void convertVertexColors(vec4Array& colors) const override {};
         void convertVertexColors(dvec4Array& colors) const override {};
         void convertVertexColors(vec3Array& colors) const override {};
         void convertVertexColors(dvec3Array& colors) const override {};
 
-        void convertMaterialColor(vec4& color) const override{};
+        void convertMaterialColor(vec4& color) const override {};
         void convertMaterialColor(dvec4& color) const override {};
         void convertMaterialColor(vec3& color) const override {};
         void convertMaterialColor(dvec3& color) const override {};
-        void convertMaterialColors(vec4Array& colors) const override{};
+        void convertMaterialColors(vec4Array& colors) const override {};
         void convertMaterialColors(dvec4Array& colors) const override {};
         void convertMaterialColors(vec3Array& colors) const override {};
         void convertMaterialColors(dvec3Array& colors) const override {};
@@ -74,10 +73,10 @@ namespace vsg
     class VSG_DECLSPEC sRGB_to_linearColorSpaceConvertor : public Inherit<ColorSpaceConvertor, sRGB_to_linearColorSpaceConvertor>
     {
     public:
-        using ColorSpaceConvertor::convertVertexColor;
-        using ColorSpaceConvertor::convertVertexColors;
         using ColorSpaceConvertor::convertMaterialColor;
         using ColorSpaceConvertor::convertMaterialColors;
+        using ColorSpaceConvertor::convertVertexColor;
+        using ColorSpaceConvertor::convertVertexColors;
 
         void convertVertexColor(vec4& color) const override { color = sRGB_to_linear(color); };
         void convertVertexColor(dvec4& color) const override { color = sRGB_to_linear(color); };
@@ -98,10 +97,10 @@ namespace vsg
     class VSG_DECLSPEC linear_to_sRGBColorSpaceConvertor : public Inherit<ColorSpaceConvertor, linear_to_sRGBColorSpaceConvertor>
     {
     public:
-        using ColorSpaceConvertor::convertVertexColor;
-        using ColorSpaceConvertor::convertVertexColors;
         using ColorSpaceConvertor::convertMaterialColor;
         using ColorSpaceConvertor::convertMaterialColors;
+        using ColorSpaceConvertor::convertVertexColor;
+        using ColorSpaceConvertor::convertVertexColors;
 
         void convertVertexColor(vec4& color) const override { color = linear_to_sRGB(color); };
         void convertVertexColor(dvec4& color) const override { color = linear_to_sRGB(color); };

@@ -10,8 +10,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 </editor-fold> */
 
-#include <vsg/utils/ColorSpaceConvertor.h>
 #include <vsg/io/Options.h>
+#include <vsg/utils/ColorSpaceConvertor.h>
 
 using namespace vsg;
 
@@ -21,7 +21,7 @@ ColorSpaceConvertor::ColorSpaceConvertor()
 
 void ColorSpaceConvertor::convertVertexColor(vec3& color) const
 {
-    vec4 temp {color.x, color.y, color.z, 1.0};
+    vec4 temp{color.x, color.y, color.z, 1.0};
     convertVertexColor(temp);
     color = temp.xyz;
 }
