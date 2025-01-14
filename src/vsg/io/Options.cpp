@@ -49,6 +49,8 @@ Options::Options(const Options& options) :
     mapRGBtoRGBAHint(options.mapRGBtoRGBAHint),
     sceneCoordinateConvention(options.sceneCoordinateConvention),
     formatCoordinateConventions(options.formatCoordinateConventions),
+    formatLoadColorSpaceConvertors(options.formatLoadColorSpaceConvertors),
+    formatSaveColorSpaceConvertors(options.formatSaveColorSpaceConvertors),
     shaderSets(options.shaderSets),
     inheritedState(options.inheritedState),
     instrumentation(options.instrumentation),
@@ -79,6 +81,8 @@ int Options::compare(const Object& rhs_object) const
     if ((result = compare_value(mapRGBtoRGBAHint, rhs.mapRGBtoRGBAHint))) return result;
     if ((result = compare_value(sceneCoordinateConvention, rhs.sceneCoordinateConvention))) return result;
     if ((result = compare_value(formatCoordinateConventions, rhs.formatCoordinateConventions))) return result;
+    if ((result = compare_value(formatLoadColorSpaceConvertors, rhs.formatLoadColorSpaceConvertors))) return result;
+    if ((result = compare_value(formatSaveColorSpaceConvertors, rhs.formatSaveColorSpaceConvertors))) return result;
     return compare_value(shaderSets, rhs.shaderSets);
 }
 
